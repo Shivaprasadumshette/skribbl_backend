@@ -18,6 +18,10 @@ mongoose.connect(DB).then(()=>{
     console.log(e);
 });
 
+app.get('/',(req,res)=>{
+res.send('Api is running');
+})
+
 io.on('connection', socket =>{
     console.log('connected!');
     //create Game CallBack
